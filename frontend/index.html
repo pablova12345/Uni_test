@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Inventario</title>
+  <link rel="stylesheet" href="./src/estilos.css" />
+</head>
+<body>
+  <div id="pantalla-login" class="pantalla-login"></div>
+
+  <div id="app" class="layout" hidden>
+    <aside class="lateral">
+      <div class="marca">
+        <strong id="titulo-app">Gestor de Inventario</strong>
+        <span class="sub" id="version"></span>
+      </div>
+      <nav id="nav" class="nav"></nav>
+      <div class="pie-lateral">
+        <div class="sesion">
+          <span class="sesion-nombre" id="sesion-nombre"></span>
+          <span class="sub" id="sesion-rol"></span>
+          <button id="salir" class="borrar">Cerrar sesion</button>
+        </div>
+        <p class="sub pie">Datos mockeados en memoria</p>
+      </div>
+    </aside>
+
+    <main class="contenido">
+      <header class="cabecera">
+        <h1 id="titulo-vista">Resumen</h1>
+      </header>
+      <p id="error" class="error" hidden></p>
+      <div id="vista" class="vista"></div>
+    </main>
+  </div>
+
+  <div id="tooltip" class="tooltip" role="status" hidden></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

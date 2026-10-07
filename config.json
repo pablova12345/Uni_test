@@ -1,0 +1,19 @@
+{
+  "app": {
+    "nombre": "Gestor de Inventario",
+    "version": "2.0.0",
+    "entorno": "desarrollo"
+  },
+  "servidor": {
+    "host": "127.0.0.1",
+    "puerto": 8000,
+    "origenes_permitidos": ["http://localhost:5173", "http://127.0.0.1:5173"]
+  },
+  "inventario": {
+    "moneda": "EUR",
+    "stock_minimo": 5,
+    "iva": 0.21,
+    "categorias": ["Portatiles", "Perifericos", "Monitores", "Redes"],
+    "motivos_movimiento": ["Compra", "Venta", "Devolucion", "Ajuste de inventario", "Rotura"]
+  }
+}
