@@ -10,7 +10,7 @@
     "origenes_permitidos": ["http://localhost:5173", "http://127.0.0.1:5173"]
   },
   "inventario": {
-    "moneda": "EUR",
+    "moneda": "Bs",
     "stock_minimo": 5,
     "iva": 0.21,
     "categorias": ["Portatiles", "Perifericos", "Monitores", "Redes"],

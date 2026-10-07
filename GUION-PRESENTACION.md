@@ -155,7 +155,7 @@ Si te preguntan **como** esta mockeado:
 
 **1. `test_resumen_global_y_por_categoria`**
 > "Comprueba los numeros que alimentan la ventana Resumen. Con 4 productos mockeados verifica
-> que suma bien las 22 unidades, que calcula los 11.350 euros de valor total, que detecta los
+> que suma bien las 22 unidades, que calcula los 11.350 Bs de valor total, que detecta los
 > 2 productos por debajo del stock minimo, y que el desglose por categoria agrupa bien y lo
 > devuelve ordenado de mayor a menor valor, que es como lo pinta el grafico."
 

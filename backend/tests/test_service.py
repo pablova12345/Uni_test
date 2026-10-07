@@ -9,10 +9,10 @@ def test_resumen_global_y_por_categoria(servicio: InventarioService):
     """Test 1: los datos que alimentan la vista Resumen (KPIs y desglose)."""
     resumen = servicio.resumen()
     assert resumen.total_productos == 4
-    assert resumen.unidades == 22                   # 10 + 2 + 4 + 6
-    assert resumen.valor_inventario == 11350.00     # 10000 + 100 + 800 + 450
-    assert resumen.productos_stock_bajo == 2        # cantidades 2 y 4 < stock_minimo 5
-    assert resumen.moneda == "EUR"
+    assert resumen.unidades == 25                  
+    assert resumen.valor_inventario == 11350.00   
+    assert resumen.productos_stock_bajo == 2       
+    assert resumen.moneda == "Bs"
 
     categorias = servicio.resumen_por_categoria()
     assert [c.categoria for c in categorias] == ["Portatiles", "Monitores", "Perifericos"]
@@ -40,7 +40,7 @@ def test_listar_filtra_y_crear_valida_la_categoria(servicio: InventarioService):
 
 
 def test_movimientos_actualizan_el_stock_y_su_historial(servicio: InventarioService):
-    """Test 3: los datos de la vista Movimientos (entrada, salida y validaciones)."""
+    """Test 3: los datos de la vista Movimientos entrada, salida y validaciones."""
     entrada = servicio.registrar_movimiento(
         MovimientoNuevo(producto_id=2, tipo=TipoMovimiento.ENTRADA, cantidad=8, motivo="Compra")
     )

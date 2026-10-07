@@ -1,6 +1,6 @@
 /** Logica pura del inventario: facil de testear sin navegador ni servidor. */
 
-export function formatearMoneda(valor, moneda = "EUR") {
+export function formatearMoneda(valor, moneda = "Bs") {
   return `${valor.toFixed(2)} ${moneda}`;
 }
 
@@ -16,7 +16,7 @@ export function filtrarProductos(productos, { busqueda = "", categoria = "", sol
 }
 
 /** Calcula los totales en el cliente a partir de la lista visible. */
-export function calcularResumen(productos, moneda = "EUR") {
+export function calcularResumen(productos, moneda = "Bs") {
   const unidades = productos.reduce((acc, p) => acc + p.cantidad, 0);
   const valor = productos.reduce((acc, p) => acc + p.cantidad * p.precio, 0);
   return {

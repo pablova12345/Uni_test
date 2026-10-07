@@ -12,14 +12,14 @@ import { CATEGORIAS_MOCK, PRODUCTOS_MOCK } from "./mocks.js";
 describe("logica de inventario", () => {
   it("test 1: resume, filtra, ordena y escala las barras del grafico", () => {
     // Resumen y formato (ventana Resumen)
-    expect(calcularResumen(PRODUCTOS_MOCK, "EUR")).toEqual({
+    expect(calcularResumen(PRODUCTOS_MOCK, "Bs")).toEqual({
       totalProductos: 3,
       unidades: 16,              // 10 + 2 + 4
       valorInventario: 10900,    // 10000 + 100 + 800
       productosStockBajo: 2,
-      moneda: "EUR",
+      moneda: "Bs",
     });
-    expect(formatearMoneda(10900, "EUR")).toBe("10900.00 EUR");
+    expect(formatearMoneda(10900, "Bs")).toBe("10900.00 Bs");
 
     // Filtros y ordenacion (ventana Productos)
     expect(filtrarProductos(PRODUCTOS_MOCK, { busqueda: "  raton " }).map((p) => p.id)).toEqual([2]);

@@ -27,7 +27,7 @@ def config_mock() -> Config:
         host="127.0.0.1",
         puerto=8000,
         origenes_permitidos=["http://localhost:5173"],
-        moneda="EUR",
+        moneda="Bs",
         stock_minimo=5,
         iva=0.21,
         categorias=["Portatiles", "Perifericos", "Monitores", "Redes"],
